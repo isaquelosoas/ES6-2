@@ -1,0 +1,16 @@
+{
+  "name": "ES6",
+  "version": "1.0.0",
+  "description": "Aprendendo ES6+",
+  "main": "s",
+  "repository": "http://github.com/isaquelosoas",
+  "author": "Isaque Lopes",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3"
+  },
+  "scripts": {"dev": "babel ./main.js -o ./bundle.js -w"}
+}
