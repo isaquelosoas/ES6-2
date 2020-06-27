@@ -68,3 +68,9 @@ const user ={
     apelido: "chacaraca"
 };
 console.log(user);
+import somaNova from './funcao.js';
+console.log(somaNova(1,2));
+import {Usuario, Admin} from './Admin.js';
+const ave = new Admin;
+ave.setEmailESenha("falca@falcao.com",'faruei');
+console.log(ave.isAdmin());

@@ -1,4 +1,4 @@
-class Usuario{
+export class Usuario{
     constructor(){
         this.email = "usuario@host.com";
         this.senha = "123456";
@@ -11,14 +11,15 @@ class Usuario{
         if (this.admin) return true;
         else return false;
     }
-}
-class Admin extends Usuario {
+};
+export class Admin extends Usuario {
     constructor(){
         super();
         this.admin = true;
     }
         
-}
+};
+
 
 const usuario = new Usuario;
 const admin = new Admin;
