@@ -74,3 +74,48 @@ import {Usuario, Admin} from './Admin.js';
 const ave = new Admin;
 ave.setEmailESenha("falca@falcao.com",'faruei');
 console.log(ave.isAdmin());
+// Exercício transformar promise em async/await
+const delay = () => new Promise(resolve => {    
+    setTimeout(() => resolve(),2000)});
+async function umPorSegundo() {
+    
+    console.log(await delay());
+    console.log(1);        
+    console.log(await delay());
+    console.log(2);
+    console.log(await delay());
+    console.log(3);
+    console.log(await delay());
+    console.log(4);
+}
+umPorSegundo();
+// Exercício axios
+import axios from 'axios';
+async function getGitUser(usuario){
+    try{
+        let user = await axios.get(`http://api.github.com/users/${usuario}`);
+        console.log(user.data.avatar_url);
+    }
+    catch{
+        console.log('Algo de errado com a requisição');
+    }
+    
+}
+getGitUser('isaquelosoas');
+
+
+class GitHub{
+    static async getRepositorie(repositorie){
+        try{
+            const response = await axios.get(`http://api.github.com/repos/${repositorie}`);
+            console.log(response);
+        }
+        catch{
+            console.warn('repositório Inexistente');
+        }
+    }
+}
+
+GitHub.getRepositorie('isaquelosoas/ES6');
+GitHub.getRepositorie('rocketseat/dslkvmskv');
+
