@@ -102,20 +102,7 @@ async function getGitUser(usuario){
     
 }
 getGitUser('isaquelosoas');
-
-
-class GitHub{
-    static async getRepositorie(repositorie){
-        try{
-            const response = await axios.get(`http://api.github.com/repos/${repositorie}`);
-            console.log(response);
-        }
-        catch{
-            console.warn('repositório Inexistente');
-        }
-    }
-}
-
+import GitHub from './GitHub.js';
 GitHub.getRepositorie('isaquelosoas/ES6');
 GitHub.getRepositorie('rocketseat/dslkvmskv');
 
